@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { StudentFacadeService } from '../../core/services/student.service';
+import { StudentService } from '../../core/services/student.service';
 import { TimeRangePipe } from '../../shared/pipes/time-range.pipe';
 import { hhmmToMinutes, isTodayCode } from '../../shared/utils/time.utils';
 
@@ -16,12 +16,12 @@ export class TimetablePage implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    public studentFacadeService: StudentFacadeService
+    public StudentService: StudentService
   ) {}
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id')!;
-    this.studentFacadeService.loadSchedule(id);
+    this.StudentService.loadSchedule(id);
   }
 
   isCurrent(c: any) {

@@ -1,4 +1,4 @@
-@if (studentFacadeService.student(); as student) {
+@if (StudentService.student(); as student) {
   <section class="page">
     <h2>{{ student.name }} ({{ student.id }})</h2>
 
@@ -26,9 +26,9 @@
     </table>
   </section>
 } @else {
-  @if (studentFacadeService.loading()) {
+  @if (StudentService.loading()) {
     <p>Loading timetable…</p>
-  } @else if (studentFacadeService.error()) {
-    <p>{{ studentFacadeService.error() }}</p>
+  } @else if (StudentService.error()) {
+    <p>{{ StudentService.error() }}</p>
   }
 }

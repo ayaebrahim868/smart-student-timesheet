@@ -11,8 +11,8 @@
 
   <h2>All Students</h2>
 
-  @if (studentFacadeService.error()) {
-    <p class="error">{{ studentFacadeService.error() }}</p>
+  @if (StudentService.error()) {
+    <p class="error">{{ StudentService.error() }}</p>
   }
    <!-- @else { -->
     <table>
@@ -24,7 +24,7 @@
         </tr>
       </thead>
       <tbody>
-        @for (s of studentFacadeService.students(); track s.id) {
+        @for (s of StudentService.students(); track s.id) {
           <tr>
             <td>
                 <a [routerLink]="['/timetable', s.id]">

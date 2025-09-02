@@ -3,7 +3,7 @@ import { Student } from "../models/student.model";
 import { HttpStudentService } from "./http-student.service";
 
 @Injectable({ providedIn: 'root' })
-export class StudentFacadeService {
+export class StudentService {
   student = signal<Student | null>(null);
   loading = signal(false);
   error = signal<string | null>(null);
