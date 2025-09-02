@@ -1,0 +1,25 @@
+.page {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th,
+td {
+    padding: .5rem;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+tr.current {
+    background: #e6ffed;
+}
+
+tr.next {
+    background: #efffe6;
+}

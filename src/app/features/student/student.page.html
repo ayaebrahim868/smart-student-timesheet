@@ -1,0 +1,41 @@
+<section class="page">
+  <h1>Smart Student TimeSheet</h1>
+
+  <form (ngSubmit)="go()">
+    <label>
+      Student ID
+      <input type="text" [(ngModel)]="id" name="id" required />
+    </label>
+    <button type="submit">View timetable</button>
+  </form>
+
+  <h2>All Students</h2>
+
+  @if (studentFacadeService.error()) {
+    <p class="error">{{ studentFacadeService.error() }}</p>
+  }
+   <!-- @else { -->
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Classes Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (s of studentFacadeService.students(); track s.id) {
+          <tr>
+            <td>
+                <a [routerLink]="['/timetable', s.id]">
+                    {{ s.id }}
+                </a>
+            </td>
+            <td>{{ s.name }}</td>
+            <td>{{ s.classes.length || 0 }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  <!-- } -->
+</section>

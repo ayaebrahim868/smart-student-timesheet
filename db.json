@@ -1,0 +1,58 @@
+{
+  "students": [
+    {
+      "id": "2025001",
+      "name": "Aya Mahmoud",
+      "classes": [
+        {
+          "course": "Math",
+          "day": "Mon",
+          "start": "09:00",
+          "end": "10:15",
+          "room": "A1"
+        },
+        {
+          "course": "Physics",
+          "day": "Mon",
+          "start": "11:00",
+          "end": "12:15",
+          "room": "B2"
+        },
+        {
+          "course": "Chemistry",
+          "day": "Tue",
+          "start": "20:00",
+          "end": "23:15",
+          "room": "C3"
+        },
+        {
+          "course": "Arabic",
+          "day": "wed",
+          "start": "13:00",
+          "end": "14:15",
+          "room": "C3"
+        }
+      ]
+    },
+    {
+      "id": "2025002",
+      "name": "Sara Mahmoud",
+      "classes": [
+        {
+          "course": "Algorithms",
+          "day": "Sun",
+          "start": "10:00",
+          "end": "11:15",
+          "room": "D4"
+        },
+        {
+          "course": "Databases",
+          "day": "Tue",
+          "start": "09:00",
+          "end": "10:15",
+          "room": "E5"
+        }
+      ]
+    }
+  ]
+}
